@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="联系北京仝志伟业 - SMT 设备咨询">
+    <title>联系我们 - 北京仝志伟业</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        :root { --primary: #0066CC; --secondary: #FF6600; --dark: #003366; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        .navbar { background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; }
+        .logo { font-size: 24px; font-weight: bold; color: var(--primary); text-decoration: none; }
+        .nav-menu { display: flex; list-style: none; gap: 30px; }
+        .nav-menu a { text-decoration: none; color: #333; font-weight: 500; }
+        
+        .page-header { background: linear-gradient(135deg, var(--primary), var(--dark)); color: white; padding: 150px 0 80px; text-align: center; margin-top: 60px; }
+        .page-header h1 { font-size: 48px; margin-bottom: 15px; }
+        
+        .contact-section { padding: 80px 0; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+        .contact-info h2 { font-size: 28px; color: var(--dark); margin-bottom: 25px; }
+        .contact-item { margin-bottom: 25px; }
+        .contact-item h3 { color: var(--primary); margin-bottom: 10px; font-size: 18px; }
+        .contact-item p { color: #666; line-height: 1.6; }
+        
+        .contact-form { background: #f9f9f9; padding: 30px; border-radius: 8px; }
+        .contact-form h2 { font-size: 28px; color: var(--dark); margin-bottom: 25px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; color: #333; font-weight: 500; }
+        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; }
+        .form-group textarea { height: 120px; resize: vertical; }
+        .btn-submit { background: var(--primary); color: white; padding: 12px 30px; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; font-weight: 600; }
+        .btn-submit:hover { background: var(--dark); }
+        
+        .footer { background: #1a1a1a; color: #ccc; padding: 40px 0 20px; margin-top: 60px; }
+        .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #333; }
+        
+        @media (max-width: 768px) { .nav-menu { display: none; } .contact-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">仝志伟业</a>
+            <ul class="nav-menu">
+                <li><a href="/">首页</a></li>
+                <li><a href="/products/">产品中心</a></li>
+                <li><a href="/about/">关于我们</a></li>
+                <li><a href="/news/">新闻动态</a></li>
+                <li><a href="/contact/" class="active">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>联系我们</h1>
+            <p>欢迎咨询 SMT 设备相关问题</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>联系方式</h2>
+                    <div class="contact-item">
+                        <h3>📞 电话咨询</h3>
+                        <p>电话：待补充<br>手机：待补充</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>📧 邮件咨询</h3>
+                        <p>邮箱：待补充</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>📍 公司地址</h3>
+                        <p>地址：北京市<br>（详细地址待补充）</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>🕐 工作时间</h3>
+                        <p>周一至周五：9:00 - 18:00<br>周六、周日：休息</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h2>在线留言</h2>
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label for="name">姓名 *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">电话 *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">邮箱</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">留言内容 *</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">提交留言</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 北京仝志伟业 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

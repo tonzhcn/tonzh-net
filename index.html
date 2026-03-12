@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="北京仝志伟业 - 专业 SMT 设备供应商，提供点胶机、锡膏印刷机、贴片机、回流炉、波峰焊、AOI 检测等完整 SMT 生产线解决方案">
+    <title>北京仝志伟业 - SMT 设备专业供应商</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        :root {
+            --primary: #0066CC;
+            --secondary: #FF6600;
+            --dark: #003366;
+            --light: #f5f5f5;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Navigation */
+        .navbar { background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; }
+        .logo { font-size: 24px; font-weight: bold; color: var(--primary); text-decoration: none; }
+        .nav-menu { display: flex; list-style: none; gap: 30px; }
+        .nav-menu a { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s; }
+        .nav-menu a:hover { color: var(--primary); }
+        
+        /* Hero Section */
+        .hero { background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%); color: white; padding: 150px 0 100px; text-align: center; margin-top: 60px; }
+        .hero h1 { font-size: 48px; margin-bottom: 20px; }
+        .hero p { font-size: 20px; opacity: 0.9; max-width: 800px; margin: 0 auto 30px; }
+        .btn { display: inline-block; padding: 15px 40px; background: var(--secondary); color: white; border-radius: 4px; text-decoration: none; font-weight: 600; transition: background 0.3s; }
+        .btn:hover { background: #e55c00; }
+        
+        /* Products Grid */
+        .products-section { padding: 80px 0; background: var(--light); }
+        .section-title { text-align: center; font-size: 36px; color: var(--dark); margin-bottom: 50px; }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .product-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+        .product-icon { height: 150px; background: linear-gradient(135deg, var(--primary), var(--dark)); display: flex; align-items: center; justify-content: center; font-size: 60px; color: white; }
+        .product-info { padding: 25px; }
+        .product-info h3 { color: var(--primary); margin-bottom: 10px; font-size: 22px; }
+        .product-info p { color: #666; font-size: 14px; margin-bottom: 15px; }
+        .product-link { color: var(--secondary); text-decoration: none; font-weight: 600; }
+        .product-link:hover { text-decoration: underline; }
+        
+        /* About Section */
+        .about-section { padding: 80px 0; }
+        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about-text h2 { font-size: 32px; color: var(--dark); margin-bottom: 20px; }
+        .about-text p { color: #666; line-height: 1.8; margin-bottom: 20px; }
+        .about-image { background: var(--light); height: 400px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; color: #999; }
+        
+        /* Features */
+        .features-section { padding: 80px 0; background: var(--dark); color: white; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+        .feature-item { text-align: center; }
+        .feature-icon { font-size: 48px; margin-bottom: 20px; }
+        .feature-item h3 { font-size: 20px; margin-bottom: 15px; }
+        .feature-item p { opacity: 0.9; line-height: 1.6; }
+        
+        /* Footer */
+        .footer { background: #1a1a1a; color: #ccc; padding: 40px 0 20px; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 30px; }
+        .footer-section h3 { color: white; margin-bottom: 20px; font-size: 18px; }
+        .footer-section p { line-height: 1.8; }
+        .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #333; }
+        
+        @media (max-width: 768px) {
+            .nav-menu { display: none; }
+            .hero h1 { font-size: 32px; }
+            .about-content { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">仝志伟业</a>
+            <ul class="nav-menu">
+                <li><a href="/">首页</a></li>
+                <li><a href="/products/">产品中心</a></li>
+                <li><a href="/about/">关于我们</a></li>
+                <li><a href="/news/">新闻动态</a></li>
+                <li><a href="/contact/">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>SMT 设备专业供应商</h1>
+            <p>提供完整的 SMT 生产线解决方案，包括点胶机、锡膏印刷机、贴片机、回流炉、波峰焊、AOI 检测设备等</p>
+            <a href="/products/" class="btn">查看产品</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">产品中心</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon">💧</div>
+                    <div class="product-info">
+                        <h3>点胶机</h3>
+                        <p>高精度点胶解决方案，适用于 SMT 贴片、CSP、BGA 等封装工艺</p>
+                        <a href="/products/dispenser/" class="product-link">查看详情 →</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">📋</div>
+                    <div class="product-info">
+                        <h3>锡膏印刷机</h3>
+                        <p>精密锡膏印刷设备，确保焊膏均匀涂布，提高焊接质量</p>
+                        <a href="/products/solder-printer/" class="product-link">查看详情 →</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🖨️</div>
+                    <div class="product-info">
+                        <h3>锡膏喷印机</h3>
+                        <p>非接触式喷印技术，适用于高精度、高灵活性生产需求</p>
+                        <a href="/products/solder-jetter/" class="product-link">查看详情 →</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🎯</div>
+                    <div class="product-info">
+                        <h3>贴片机</h3>
+                        <p>高速高精度贴装设备，支持多种元器件尺寸和封装类型</p>
+                        <a href="/products/placer/" class="product-link">查看详情 →</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🔧</div>
+                    <div class="product-info">
+                        <h3>散料贴片机</h3>
+                        <p>专为散料元器件设计，灵活应对小批量、多品种生产</p>
+                        <a href="/products/loose-parts-placer/" class="product-link">查看详情 →</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🔥</div>
+                    <div class="product-info">
+                        <h3>台式回流炉</h3>
+                        <p>紧凑型回流焊接设备，适合研发和小批量生产</p>
+                        <a href="/products/desktop-reflow/" class="product-link">查看详情 →</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">💨</div>
+                    <div class="product-info">
+                        <h3>氮气回流炉</h3>
+                        <p>惰性气体保护焊接，有效减少氧化，提高焊接质量</p>
+                        <a href="/products/nitrogen-reflow/" class="product-link">查看详情 →</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🔄</div>
+                    <div class="product-info">
+                        <h3>在线式回流炉</h3>
+                        <p>全自动在线回流焊接，适合大规模连续生产</p>
+                        <a href="/products/inline-reflow/" class="product-link">查看详情 →</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🌊</div>
+                    <div class="product-info">
+                        <h3>波峰焊</h3>
+                        <p>通孔元器件焊接设备，稳定可靠，适用于大批量生产</p>
+                        <a href="/products/wave-soldering/" class="product-link">查看详情 →</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">📷</div>
+                    <div class="product-info">
+                        <h3>AOI 检测设备</h3>
+                        <p>自动光学检测，快速准确识别焊接缺陷，提高产品质量</p>
+                        <a href="/products/aoi/" class="product-link">查看详情 →</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🛠️</div>
+                    <div class="product-info">
+                        <h3>辅助设备</h3>
+                        <p>SMT 生产线周边设备，包括上板机、下板机、收板机等</p>
+                        <a href="/products/auxiliary/" class="product-link">查看详情 →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>关于仝志伟业</h2>
+                    <p>北京仝志伟业公司专注于 SMT（表面贴装技术）设备领域，为客户提供完整的 SMT 生产线解决方案。</p>
+                    <p>我们提供从锡膏印刷、贴片、回流焊接到 AOI 检测的全套设备，涵盖点胶机、锡膏印刷机、贴片机、回流炉、波峰焊等核心产品。</p>
+                    <p>公司秉承"质量第一、客户至上"的理念，致力于为客户提供高品质的设备和优质的服务。</p>
+                    <a href="/about/" class="btn" style="background: var(--primary);">了解更多</a>
+                </div>
+                <div class="about-image">公司图片展示区</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🏆</div>
+                    <h3>品质保证</h3>
+                    <p>严格的质量控制体系，确保每台设备性能稳定可靠</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>技术支持</h3>
+                    <p>专业技术团队提供售前咨询、售中指导、售后服务全流程支持</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🚀</div>
+                    <h3>快速交付</h3>
+                    <p>完善的供应链体系，确保设备及时交付，减少客户等待时间</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💼</div>
+                    <h3>定制方案</h3>
+                    <p>根据客户生产需求，提供个性化的 SMT 生产线配置方案</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>北京仝志伟业</h3>
+                    <p>专业 SMT 设备供应商<br>完整的 SMT 生产线解决方案</p>
+                </div>
+                <div class="footer-section">
+                    <h3>产品中心</h3>
+                    <p>点胶机 | 锡膏印刷机 | 贴片机<br>回流炉 | 波峰焊 | AOI 检测设备</p>
+                </div>
+                <div class="footer-section">
+                    <h3>联系方式</h3>
+                    <p>电话：待补充<br>邮箱：待补充<br>地址：北京市</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 北京仝志伟业 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
