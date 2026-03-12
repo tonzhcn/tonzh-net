@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AOI 检测设备系列 - 高精度 SMT 检测设备，适用于贴片、CSP、BGA 封装工艺">
+    <meta name="description" content="AOI 检测设备系列 - 自动光学检测设备，2D/3D 检测可选，快速识别焊接缺陷，提高产品质量">
+    <meta name="keywords" content="AOI 检测设备，自动光学检测，SMT 检测，2D 检测，3D 检测，焊接检测">
     <title>AOI 检测设备系列 - 北京仝志伟业</title>
     <link rel="stylesheet" href="/css/style.css">
     <style>
@@ -18,15 +19,14 @@
         .nav-menu a { text-decoration: none; color: #333; font-weight: 500; }
         .page-header { background: linear-gradient(135deg, var(--primary), var(--dark)); color: white; padding: 150px 0 80px; text-align: center; margin-top: 60px; }
         .page-header h1 { font-size: 48px; margin-bottom: 15px; }
-        .product-section { padding: 80px 0; }
-        .product-content { max-width: 900px; margin: 0 auto; }
-        .product-content h2 { color: var(--dark); margin: 30px 0 15px; font-size: 28px; }
-        .product-content p { color: #666; line-height: 1.8; margin-bottom: 20px; font-size: 16px; }
-        .product-content ul { margin: 20px 0 20px 30px; }
-        .product-content li { color: #666; line-height: 1.8; margin-bottom: 10px; }
-        .product-image { background: #f5f5f5; height: 400px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #999; margin: 30px 0; }
-        .cta-box { background: linear-gradient(135deg, var(--primary), var(--dark)); color: white; padding: 40px; border-radius: 8px; text-align: center; margin-top: 40px; }
-        .btn-white { display: inline-block; padding: 15px 40px; background: white; color: var(--primary); border-radius: 4px; text-decoration: none; font-weight: 600; margin: 10px; }
+        .products-section { padding: 80px 0; }
+        .section-title { font-size: 36px; color: var(--dark); margin-bottom: 40px; text-align: center; }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .product-card { background: white; border: 2px solid #e0e0e0; border-radius: 8px; padding: 30px; transition: transform 0.3s, box-shadow 0.3s; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+        .product-card h3 { color: var(--primary); margin-bottom: 15px; font-size: 24px; }
+        .product-card p { color: #666; margin-bottom: 20px; line-height: 1.6; }
+        .product-link { display: block; text-align: center; padding: 12px; background: var(--primary); color: white; text-decoration: none; font-weight: 600; border-radius: 4px; }
         .footer { background: #1a1a1a; color: #ccc; padding: 40px 0 20px; margin-top: 60px; }
         .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #333; }
         @media (max-width: 768px) { .nav-menu { display: none; } }
@@ -45,48 +45,34 @@
             </ul>
         </div>
     </nav>
-
     <section class="page-header">
         <div class="container">
             <h1>AOI 检测设备系列</h1>
-            <p>自动光学检测设备</p>
+            <p>自动光学检测解决方案</p>
         </div>
     </section>
-
-    <section class="product-section">
+    <section class="products-section">
         <div class="container">
-            <div class="product-content">
-                <div class="product-image">产品图片展示区</div>
-                <h2>产品概述</h2>
-                <p>高精度检测设备，适用于 SMT 贴片、CSP、BGA 等封装工艺，确保检测精度和一致性。</p>
-                
-                <h2>核心特点</h2>
-                <ul>
-                    <li>高精度运动控制系统，重复定位精度±0.01mm</li>
-                    <li>视觉定位系统，自动识别 PCB MARK 点</li>
-                    <li>多种检测阀可选，适应不同粘度胶水</li>
-                    <li>检测压力精确控制，确保检测一致性</li>
-                    <li>友好的人机界面，编程简单快捷</li>
-                </ul>
-                
-                <h2>应用领域</h2>
-                <ul>
-                    <li>SMT 贴片工艺 - 红胶/锡膏检测</li>
-                    <li>CSP/BGA 封装 - 底部填充胶检测</li>
-                    <li>LED 封装 - 荧光粉/硅胶检测</li>
-                    <li>电子组装 - 三防漆/导热胶检测</li>
-                </ul>
-                
-                <div class="cta-box">
-                    <h3>需要详细技术方案？</h3>
-                    <p>我们的工程师可根据您的产品特点和工艺需求，提供专业选型建议</p>
-                    <a href="/contact/" class="btn-white">联系咨询</a>
-                    <a href="/products/" class="btn-white">返回产品中心</a>
+            <h2 class="section-title">产品型号</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <h3>2D AOI 检测设备</h3>
+                    <p>2D 光学检测，快速准确</p>
+                    <a href="/products/aoi/2d/" class="product-link">查看详情 →</a>
+                </div>
+                <div class="product-card">
+                    <h3>3D AOI 检测设备</h3>
+                    <p>3D 立体检测，精度更高</p>
+                    <a href="/products/aoi/3d/" class="product-link">查看详情 →</a>
+                </div>
+                <div class="product-card">
+                    <h3>在线式 AOI</h3>
+                    <p>在线自动检测，适合流水线</p>
+                    <a href="/products/aoi/inline/" class="product-link">查看详情 →</a>
                 </div>
             </div>
         </div>
     </section>
-
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom">
@@ -94,7 +80,6 @@
             </div>
         </div>
     </footer>
-
     <script src="/js/main.js"></script>
 </body>
 </html>
