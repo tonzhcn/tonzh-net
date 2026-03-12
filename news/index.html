@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="仝志伟业新闻中心 - 提供最新 SMT 设备行业资讯、技术动态和公司新闻，包括点胶机、锡膏印刷机、贴片机、回流炉等专业资讯">
+    <meta name="keywords" content="SMT 设备新闻，点胶机资讯，锡膏印刷机技术，贴片机动态，回流炉行业，AOI 检测，波峰焊技术">
+    <title>新闻中心 - 北京仝志伟业</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        :root { --primary: #0066CC; --secondary: #FF6600; --dark: #003366; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        .navbar { background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; }
+        .logo { font-size: 24px; font-weight: bold; color: var(--primary); text-decoration: none; }
+        .nav-menu { display: flex; list-style: none; gap: 30px; }
+        .nav-menu a { text-decoration: none; color: #333; font-weight: 500; }
+        .nav-menu a.active { color: var(--primary); }
+        
+        .page-header { background: linear-gradient(135deg, var(--primary), var(--dark)); color: white; padding: 150px 0 80px; text-align: center; margin-top: 60px; }
+        .page-header h1 { font-size: 48px; margin-bottom: 15px; }
+        
+        .news-categories { padding: 60px 0; background: #f9f9f9; }
+        .category-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .category-card { background: white; padding: 40px 30px; border-radius: 8px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .category-card:hover { transform: translateY(-5px); }
+        .category-icon { font-size: 48px; margin-bottom: 20px; }
+        .category-card h3 { color: var(--primary); margin-bottom: 15px; font-size: 22px; }
+        .category-card p { color: #666; margin-bottom: 20px; }
+        .category-link { color: var(--secondary); text-decoration: none; font-weight: 600; }
+        
+        .news-section { padding: 80px 0; }
+        .section-title { font-size: 32px; color: var(--dark); margin-bottom: 40px; text-align: center; }
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
+        .news-card { background: white; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
+        .news-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .news-content { padding: 25px; }
+        .news-meta { font-size: 14px; color: #999; margin-bottom: 10px; }
+        .news-card h3 { color: var(--dark); margin-bottom: 15px; font-size: 20px; line-height: 1.4; }
+        .news-card p { color: #666; line-height: 1.6; margin-bottom: 20px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+        .read-more { color: var(--primary); text-decoration: none; font-weight: 600; }
+        .read-more:hover { text-decoration: underline; }
+        
+        .footer { background: #1a1a1a; color: #ccc; padding: 40px 0 20px; margin-top: 60px; }
+        .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #333; }
+        
+        @media (max-width: 768px) { .nav-menu { display: none; } .category-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">仝志伟业</a>
+            <ul class="nav-menu">
+                <li><a href="/">首页</a></li>
+                <li><a href="/products/">产品中心</a></li>
+                <li><a href="/about/">关于我们</a></li>
+                <li><a href="/news/" class="active">新闻中心</a></li>
+                <li><a href="/contact/">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>新闻中心</h1>
+            <p>了解最新 SMT 设备行业资讯与技术动态</p>
+        </div>
+    </section>
+
+    <section class="news-categories">
+        <div class="container">
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="category-icon">📰</div>
+                    <h3>行业资讯</h3>
+                    <p>SMT 行业最新资讯、市场动态、发展趋势</p>
+                    <a href="/news/industry/" class="category-link">查看详情 →</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">⚙️</div>
+                    <h3>技术动态</h3>
+                    <p>点胶机、印刷机、贴片机、回流炉等技术文章</p>
+                    <a href="/news/technology/" class="category-link">查看详情 →</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🏢</div>
+                    <h3>公司新闻</h3>
+                    <p>仝志伟业公司动态、展会活动、合作案例</p>
+                    <a href="/news/company/" class="category-link">查看详情 →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-section">
+        <div class="container">
+            <h2 class="section-title">最新文章</h2>
+            <div class="news-grid" id="news-list">
+                <!-- 新闻列表将由 JavaScript 动态加载 -->
+                <div class="news-card">
+                    <div class="news-content">
+                        <div class="news-meta">行业资讯 · 2026-03-12</div>
+                        <h3>SMT 设备市场持续增长，国产设备迎来发展机遇</h3>
+                        <p>随着 5G、新能源汽车、智能穿戴等行业的快速发展，SMT 设备市场需求持续增长。国产设备凭借性价比优势和本地化服务，市场份额不断提升...</p>
+                        <a href="#" class="read-more">阅读更多 →</a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-content">
+                        <div class="news-meta">技术动态 · 2026-03-12</div>
+                        <h3>高精度点胶技术在 SMT 生产中的应用与优化</h3>
+                        <p>点胶机作为 SMT 生产线的关键设备，其精度和稳定性直接影响产品质量。本文介绍高精度点胶技术的核心要点和优化方案...</p>
+                        <a href="#" class="read-more">阅读更多 →</a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-content">
+                        <div class="news-meta">行业资讯 · 2026-03-11</div>
+                        <h3>2026 年中国电子制造服务市场发展趋势分析</h3>
+                        <p>电子制造服务（EMS）行业正经历深刻变革，智能化、自动化成为主流趋势。SMT 设备作为核心装备，将迎来新的发展机遇...</p>
+                        <a href="#" class="read-more">阅读更多 →</a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-content">
+                        <div class="news-meta">技术动态 · 2026-03-11</div>
+                        <h3>锡膏印刷质量管控要点与常见问题解决</h3>
+                        <p>锡膏印刷是 SMT 工艺中的关键工序，印刷质量直接影响焊接良率。本文总结印刷质量管控要点和常见问题解决方案...</p>
+                        <a href="#" class="read-more">阅读更多 →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 北京仝志伟业 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+    <script>
+        // 动态加载新闻数据
+        fetch('/admin/news.json')
+            .then(response => response.json())
+            .then(data => {
+                const newsList = document.getElementById('news-list');
+                const latestNews = data.articles.slice(0, 4);
+                newsList.innerHTML = latestNews.map(article => `
+                    <div class="news-card">
+                        <div class="news-content">
+                            <div class="news-meta">${article.category} · ${article.date}</div>
+                            <h3>${article.title}</h3>
+                            <p>${article.summary}</p>
+                            <a href="${article.link}" class="read-more">阅读更多 →</a>
+                        </div>
+                    </div>
+                `).join('');
+            })
+            .catch(err => console.log('News loaded'));
+    </script>
+</body>
+</html>

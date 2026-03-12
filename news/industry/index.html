@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SMT 行业资讯 - 仝志伟业提供最新 SMT 设备市场动态、行业发展趋势、政策解读等专业资讯">
+    <meta name="keywords" content="SMT 行业，电子制造，表面贴装技术，行业趋势，市场分析">
+    <title>行业资讯 - 新闻中心 - 北京仝志伟业</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        :root { --primary: #0066CC; --secondary: #FF6600; --dark: #003366; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        .navbar { background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; }
+        .logo { font-size: 24px; font-weight: bold; color: var(--primary); text-decoration: none; }
+        .nav-menu { display: flex; list-style: none; gap: 30px; }
+        .nav-menu a { text-decoration: none; color: #333; font-weight: 500; }
+        
+        .page-header { background: linear-gradient(135deg, var(--primary), var(--dark)); color: white; padding: 150px 0 80px; text-align: center; margin-top: 60px; }
+        .page-header h1 { font-size: 48px; margin-bottom: 15px; }
+        
+        .news-section { padding: 80px 0; }
+        .breadcrumb { margin-bottom: 30px; }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .news-list { display: grid; gap: 30px; }
+        .news-item { background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 30px; transition: transform 0.3s, box-shadow 0.3s; }
+        .news-item:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .news-meta { font-size: 14px; color: #999; margin-bottom: 10px; }
+        .news-item h2 { color: var(--dark); margin-bottom: 15px; font-size: 24px; line-height: 1.4; }
+        .news-item h2 a { color: inherit; text-decoration: none; }
+        .news-item h2 a:hover { color: var(--primary); }
+        .news-item p { color: #666; line-height: 1.8; margin-bottom: 20px; }
+        .read-more { color: var(--primary); text-decoration: none; font-weight: 600; }
+        
+        .footer { background: #1a1a1a; color: #ccc; padding: 40px 0 20px; margin-top: 60px; }
+        .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #333; }
+        
+        @media (max-width: 768px) { .nav-menu { display: none; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">仝志伟业</a>
+            <ul class="nav-menu">
+                <li><a href="/">首页</a></li>
+                <li><a href="/products/">产品中心</a></li>
+                <li><a href="/about/">关于我们</a></li>
+                <li><a href="/news/">新闻中心</a></li>
+                <li><a href="/contact/">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>行业资讯</h1>
+            <p>SMT 行业最新资讯与市场动态</p>
+        </div>
+    </section>
+
+    <section class="news-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/">首页</a> &gt; <a href="/news/">新闻中心</a> &gt; 行业资讯
+            </div>
+            <div class="news-list" id="news-list">
+                <!-- 新闻列表由 JavaScript 加载 -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 北京仝志伟业 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+    <script>
+        fetch('/admin/news.json')
+            .then(response => response.json())
+            .then(data => {
+                const newsList = document.getElementById('news-list');
+                const industryNews = data.articles.filter(a => a.category === '行业资讯');
+                newsList.innerHTML = industryNews.map(article => `
+                    <div class="news-item">
+                        <div class="news-meta">${article.date}</div>
+                        <h2><a href="${article.link}">${article.title}</a></h2>
+                        <p>${article.summary}</p>
+                        <a href="${article.link}" class="read-more">阅读更多 →</a>
+                    </div>
+                `).join('');
+            });
+    </script>
+</body>
+</html>
