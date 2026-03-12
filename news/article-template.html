@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{summary}">
+    <meta name="keywords" content="{keywords}">
+    <title>{title} - 北京仝志伟业</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        :root { --primary: #0066CC; --secondary: #FF6600; --dark: #003366; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        
+        .navbar { background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; }
+        .logo { font-size: 24px; font-weight: bold; color: var(--primary); text-decoration: none; }
+        .nav-menu { display: flex; list-style: none; gap: 30px; }
+        .nav-menu a { text-decoration: none; color: #333; font-weight: 500; }
+        
+        .article-header { background: linear-gradient(135deg, var(--primary), var(--dark)); color: white; padding: 150px 0 60px; margin-top: 60px; }
+        .article-header h1 { font-size: 36px; margin-bottom: 20px; line-height: 1.4; }
+        .article-meta { opacity: 0.9; font-size: 14px; }
+        
+        .article-content { padding: 60px 0; }
+        .article-content article { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .article-content h2 { color: var(--dark); margin: 30px 0 15px; font-size: 24px; }
+        .article-content p { color: #666; line-height: 1.8; margin-bottom: 20px; font-size: 16px; }
+        .article-content ul { margin: 20px 0 20px 30px; }
+        .article-content li { color: #666; line-height: 1.8; margin-bottom: 10px; }
+        .article-content a { color: var(--primary); text-decoration: none; }
+        .article-content a:hover { text-decoration: underline; }
+        
+        .article-footer { background: #f9f9f9; padding: 30px; border-radius: 8px; margin-top: 40px; }
+        .tags { margin-bottom: 20px; }
+        .tag { display: inline-block; padding: 5px 15px; background: var(--primary); color: white; border-radius: 20px; font-size: 14px; margin-right: 10px; }
+        
+        .footer { background: #1a1a1a; color: #ccc; padding: 40px 0 20px; margin-top: 60px; }
+        .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #333; }
+        
+        @media (max-width: 768px) { .nav-menu { display: none; } .article-content article { padding: 20px; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">仝志伟业</a>
+            <ul class="nav-menu">
+                <li><a href="/">首页</a></li>
+                <li><a href="/products/">产品中心</a></li>
+                <li><a href="/about/">关于我们</a></li>
+                <li><a href="/news/">新闻中心</a></li>
+                <li><a href="/contact/">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="article-header">
+        <div class="container">
+            <h1>{title}</h1>
+            <div class="article-meta">
+                <span>{category}</span> · <span>{date}</span> · <span>仝志伟业</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="article-content">
+        <div class="container">
+            <article>
+                {content}
+            </article>
+            
+            <div class="article-footer">
+                <div class="tags">
+                    <strong>标签：</strong>
+                    {tags}
+                </div>
+                <div>
+                    <strong>相关产品：</strong>
+                    <ul style="margin-top:10px;margin-left:20px;">
+                        <li><a href="/products/dispenser/">点胶机系列</a></li>
+                        <li><a href="/products/solder-printer/">锡膏印刷机系列</a></li>
+                        <li><a href="/products/placer/">贴片机系列</a></li>
+                        <li><a href="/products/desktop-reflow/">回流炉系列</a></li>
+                        <li><a href="/products/aoi/">AOI 检测设备</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 北京仝志伟业 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

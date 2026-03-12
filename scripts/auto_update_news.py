@@ -162,6 +162,38 @@ def create_news_article(category, date):
         "tags": [random.choice(PRODUCT_KEYWORDS), random.choice(TECH_KEYWORDS)]
     }
 
+def generate_article_html(article):
+    """生成文章 HTML 文件"""
+    template_file = "/var/www/tonzh-net/news/article-template.html"
+    
+    if not os.path.exists(template_file):
+        print(f"模板文件不存在：{template_file}")
+        return
+    
+    with open(template_file, 'r', encoding='utf-8') as f:
+        template = f.read()
+    
+    # 生成标签 HTML
+    tags_html = ''.join([f'<span class="tag">{tag}</span>' for tag in article.get('tags', [])])
+    
+    # 替换模板变量
+    html = template.replace('{title}', article['title'])
+    html = html.replace('{category}', article['category'])
+    html = html.replace('{date}', article['date'])
+    html = html.replace('{summary}', article['summary'])
+    html = html.replace('{content}', article.get('content', article['summary']))
+    html = html.replace('{keywords}', ','.join(article.get('tags', [])))
+    html = html.replace('{tags}', tags_html)
+    
+    # 保存 HTML 文件
+    output_path = f"/var/www/tonzh-net{article['link']}"
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    
+    with open(output_path, 'w', encoding='utf-8') as f:
+        f.write(html)
+    
+    print(f"✓ 生成 HTML: {article['link']}")
+
 def update_news():
     """执行新闻更新"""
     print(f"[{datetime.now()}] 开始更新新闻...")
@@ -183,22 +215,25 @@ def update_news():
     # 行业资讯 2 篇
     for i in range(2):
         article = create_news_article("行业资讯", today)
-        article["title"] = f"[{i+1}] {article['title']}"
         new_articles.append(article)
         print(f"✓ 生成行业资讯：{article['title'][:50]}...")
+        generate_article_html(article)
     
     # 技术动态 2 篇
     for i in range(2):
         article = create_news_article("技术动态", today)
-        article["title"] = f"[{i+1}] {article['title']}"
         new_articles.append(article)
         print(f"✓ 生成技术动态：{article['title'][:50]}...")
+        generate_article_html(article)
     
     # 添加到新闻列表（最新的在前）
     data["articles"] = new_articles + data["articles"]
     
     # 保存
     save_news(data)
+    
+    # 设置文件权限
+    os.system("chown -R www-data:www-data /var/www/tonzh-net/news")
     
     print(f"[{datetime.now()}] 更新完成，共生成{len(new_articles)}篇文章")
     print(f"当前新闻总数：{len(data['articles'])}篇")
