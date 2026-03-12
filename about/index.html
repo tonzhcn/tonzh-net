@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="关于北京仝志伟业 - 专业 SMT 设备供应商">
+    <meta name="description" content="北京仝志伟业科技有限公司 - 成立于 2001 年，国家级专精特新'小巨人'企业中科同志旗下全资子公司，专注 SMT 设备研发制造">
     <title>关于我们 - 北京仝志伟业</title>
     <link rel="stylesheet" href="/css/style.css">
     <style>
@@ -17,19 +17,30 @@
         .logo { font-size: 24px; font-weight: bold; color: var(--primary); text-decoration: none; }
         .nav-menu { display: flex; list-style: none; gap: 30px; }
         .nav-menu a { text-decoration: none; color: #333; font-weight: 500; }
+        .nav-menu a.active { color: var(--primary); }
         
         .page-header { background: linear-gradient(135deg, var(--primary), var(--dark)); color: white; padding: 150px 0 80px; text-align: center; margin-top: 60px; }
         .page-header h1 { font-size: 48px; margin-bottom: 15px; }
         
         .about-section { padding: 80px 0; }
         .about-content { max-width: 900px; margin: 0 auto; }
-        .about-content h2 { font-size: 32px; color: var(--dark); margin-bottom: 25px; }
+        .about-content h2 { font-size: 32px; color: var(--dark); margin: 30px 0 20px; }
+        .about-content h2:first-child { margin-top: 0; }
         .about-content p { color: #666; line-height: 1.8; margin-bottom: 20px; font-size: 16px; }
+        .highlight-box { background: #f9f9f9; padding: 25px; border-left: 4px solid var(--primary); margin: 30px 0; border-radius: 0 8px 8px 0; }
+        .highlight-box p { margin: 0; color: #333; }
+        .info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 30px 0; }
+        .info-item { background: #f0f7ff; padding: 20px; border-radius: 8px; }
+        .info-item h3 { color: var(--primary); margin-bottom: 10px; font-size: 18px; }
+        .info-item p { color: #666; font-size: 14px; margin: 0; }
         
         .footer { background: #1a1a1a; color: #ccc; padding: 40px 0 20px; margin-top: 60px; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 30px; }
+        .footer-section h3 { color: white; margin-bottom: 20px; font-size: 18px; }
+        .footer-section p { line-height: 1.8; }
         .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #333; }
         
-        @media (max-width: 768px) { .nav-menu { display: none; } .page-header h1 { font-size: 32px; } }
+        @media (max-width: 768px) { .nav-menu { display: none; } .page-header h1 { font-size: 32px; } .info-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -49,46 +60,92 @@
     <section class="page-header">
         <div class="container">
             <h1>关于我们</h1>
-            <p>专业 SMT 设备供应商</p>
+            <p>北京仝志伟业科技有限公司</p>
         </div>
     </section>
 
     <section class="about-section">
         <div class="container">
             <div class="about-content">
-                <h2>北京仝志伟业公司</h2>
-                <p>北京仝志伟业公司专注于 SMT（表面贴装技术）设备领域，致力于为客户提供完整的 SMT 生产线解决方案和优质的设备产品。</p>
+                <h2>公司简介</h2>
+                <p>北京仝志伟业科技有限公司（简称"仝志伟业"）成立于 2001 年 11 月 30 日，是国家级专精特新"小巨人"企业——中科同志科技股份有限公司旗下的全资子公司，亦是中科同志旗下重要的研发与制造实体。</p>
                 
-                <h2>主营业务</h2>
-                <p>公司主营 SMT 全套设备，包括：</p>
-                <p>• <strong>点胶设备</strong>：高精度点胶机，适用于红胶、锡膏、UV 胶等多种胶水</p>
-                <p>• <strong>印刷设备</strong>：锡膏印刷机、锡膏喷印机，确保焊膏均匀涂布</p>
-                <p>• <strong>贴装设备</strong>：贴片机、散料贴片机，高速高精度贴装</p>
-                <p>• <strong>焊接设备</strong>：台式/氮气/在线式回流炉、波峰焊，满足各种焊接工艺需求</p>
-                <p>• <strong>检测设备</strong>：AOI 自动光学检测设备，快速识别焊接缺陷</p>
-                <p>• <strong>辅助设备</strong>：上板机、下板机、收板机等 SMT 周边设备</p>
+                <div class="highlight-box">
+                    <p><strong>企业精神：</strong>同心协力、众志成城、科技立身、产业报国</p>
+                    <p style="margin-top:10px;"><strong>企业理念：</strong>踏踏实实做事，老老实实做人</p>
+                </div>
                 
-                <h2>服务理念</h2>
-                <p>公司秉承"质量第一、客户至上"的经营理念，为客户提供：</p>
-                <p>• 高品质的 SMT 设备产品</p>
-                <p>• 专业的技术咨询和选型建议</p>
-                <p>• 完善的售后服务和技术支持</p>
-                <p>• 个性化的 SMT 生产线配置方案</p>
+                <p>作为中科同志系历史最悠久的公司之一，仝志伟业深耕行业二十余年，始终秉承中科同志的企业精神与理念。公司依托母公司的强大技术平台与产业资源，核心业务聚焦于半导体专用设备、SMT（表面贴装技术）设备及 PCB（印制电路板）设备的研发与制造，致力于相关领域的技术创新与产业化应用。</p>
+                
+                <h2>基本信息</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h3>🏢 公司名称</h3>
+                        <p>北京仝志伟业科技有限公司</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>📅 成立时间</h3>
+                        <p>2001 年 11 月 30 日</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>💰 注册资本</h3>
+                        <p>400 万元</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>👨‍💼 法定代表人</h3>
+                        <p>赵永先先生</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>🏛️ 企业性质</h3>
+                        <p>中科同志科技股份有限公司全资子公司</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>📍 公司地址</h3>
+                        <p>天津市宝坻区京津中关村科技城</p>
+                    </div>
+                </div>
+                
+                <h2>战略发展</h2>
+                <p>为适应整体发展战略，公司现已迁至天津市宝坻区，新址将更好地整合研发、制造与供应链资源，提升运营效率。</p>
+                
+                <p>凭借深厚的技术积累和规范的运营体系，仝志伟业不仅为中科同志的核心装备业务提供关键的研发与制造支持，同时也积极面向市场，提供先进、可靠的专用设备解决方案。</p>
+                
+                <h2>未来愿景</h2>
+                <p>未来，仝志伟业将继续作为中科同志旗下不可或缺的研发制造中心，充分发挥自身在专用设备领域的技术专长，与兄弟公司紧密协同，共同致力于推动特种封装焊接技术与高端电子制造装备的进步，为助力"中国芯"战略贡献坚实力量。</p>
                 
                 <h2>联系我们</h2>
                 <p>如您有任何 SMT 设备需求或技术问题，欢迎随时联系我们。</p>
-                <p>📞 电话：<strong>400-998-9522</strong><br>
-                📧 邮箱：<strong>sales@tonzh.com</strong><br>
-                📍 北京：北京经开区马驹桥联东 U 谷中区 15 幢 15G<br>
-                📍 天津：天津宝坻区京津中关村科技城宝善道 13 号 3 号楼东户首层</p>
+                <div class="highlight-box">
+                    <p>📞 电话：<strong>400-998-9522</strong></p>
+                    <p style="margin-top:10px;">📧 邮箱：<strong>sales@tonzh.com</strong></p>
+                    <p style="margin-top:10px;">📍 北京：北京经开区马驹桥联东 U 谷中区 15 幢 15G</p>
+                    <p style="margin-top:10px;">📍 天津：天津宝坻区京津中关村科技城宝善道 13 号 3 号楼东户首层</p>
+                </div>
             </div>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>北京仝志伟业</h3>
+                    <p>成立于 2001 年<br>中科同志旗下全资子公司<br>专注 SMT 设备研发制造</p>
+                </div>
+                <div class="footer-section">
+                    <h3>产品中心</h3>
+                    <p>点胶机 | 锡膏印刷机 | 贴片机<br>回流炉 | 波峰焊 | AOI 检测设备</p>
+                </div>
+                <div class="footer-section">
+                    <h3>联系方式</h3>
+                    <p>📞 400-998-9522<br>
+                    📧 sales@tonzh.com<br>
+                    📍 北京：北京经开区马驹桥联东 U 谷中区 15 幢 15G<br>
+                    📍 天津：天津宝坻区京津中关村科技城宝善道 13 号 3 号楼东户首层</p>
+                </div>
+            </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 北京仝志伟业 版权所有</p>
+                <p>&copy; 2026 北京仝志伟业科技有限公司 版权所有</p>
             </div>
         </div>
     </footer>
