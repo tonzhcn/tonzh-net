@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="贴片机系列 - 高速高精度 SMT 贴装设备，支持 0201-50mm 元器件，适用于多种封装类型">
-    <meta name="keywords" content="贴片机，SMT 贴片机，高速贴片机，高精度贴片机，表面贴装">
-    <title>贴片机系列 - 北京仝志伟业</title>
+    <meta name="description" content="贴片机系列 - 高速高精度 SMT 贴装设备，TP300V/TP320V/T4/T4PLUS/T8S/T8H/M6/M6D 多种型号，支持 0201-50mm 元器件">
+    <meta name="keywords" content="贴片机，SMT 贴片机，TP300V，TP320V，T4，T8S，T8H，M6，高速贴片机，高精度贴片机">
+    <title>贴片机系列 - TP300V/TP320V/T4/T8S/M6 - 北京仝志伟业</title>
     <link rel="stylesheet" href="/css/style.css">
     <style>
         :root { --primary: #0066CC; --secondary: #FF6600; --dark: #003366; }
@@ -19,17 +19,27 @@
         .nav-menu a { text-decoration: none; color: #333; font-weight: 500; }
         .page-header { background: linear-gradient(135deg, var(--primary), var(--dark)); color: white; padding: 150px 0 80px; text-align: center; margin-top: 60px; }
         .page-header h1 { font-size: 48px; margin-bottom: 15px; }
+        .intro-section { padding: 60px 0; background: #f9f9f9; }
+        .intro-content { max-width: 900px; margin: 0 auto; }
+        .intro-content h2 { color: var(--dark); margin-bottom: 20px; font-size: 32px; }
+        .intro-content p { color: #666; line-height: 1.8; margin-bottom: 20px; font-size: 16px; }
         .products-section { padding: 80px 0; }
         .section-title { font-size: 36px; color: var(--dark); margin-bottom: 40px; text-align: center; }
-        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .product-card { background: white; border: 2px solid #e0e0e0; border-radius: 8px; padding: 30px; transition: transform 0.3s, box-shadow 0.3s; }
-        .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
-        .product-card h3 { color: var(--primary); margin-bottom: 15px; font-size: 24px; }
-        .product-card p { color: #666; margin-bottom: 20px; line-height: 1.6; }
-        .product-link { display: block; text-align: center; padding: 12px; background: var(--primary); color: white; text-decoration: none; font-weight: 600; border-radius: 4px; }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .product-card { background: white; border: 2px solid #e0e0e0; border-radius: 8px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.15); border-color: var(--primary); }
+        .product-header { background: linear-gradient(135deg, var(--primary), var(--dark)); color: white; padding: 25px; }
+        .product-model { font-size: 32px; font-weight: bold; margin-bottom: 5px; }
+        .product-series { font-size: 14px; opacity: 0.9; }
+        .product-body { padding: 25px; }
+        .product-features { list-style: none; margin: 20px 0; }
+        .product-features li { padding: 8px 0; border-bottom: 1px solid #f0f0f0; color: #666; }
+        .product-features li:before { content: "✓ "; color: var(--secondary); font-weight: bold; margin-right: 8px; }
+        .product-link { display: block; text-align: center; padding: 15px; background: var(--primary); color: white; text-decoration: none; font-weight: 600; transition: background 0.3s; }
+        .product-link:hover { background: var(--dark); }
         .footer { background: #1a1a1a; color: #ccc; padding: 40px 0 20px; margin-top: 60px; }
         .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #333; }
-        @media (max-width: 768px) { .nav-menu { display: none; } }
+        @media (max-width: 768px) { .nav-menu { display: none; } .products-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -45,34 +55,167 @@
             </ul>
         </div>
     </nav>
+
     <section class="page-header">
         <div class="container">
             <h1>贴片机系列</h1>
             <p>高速高精度 SMT 贴装解决方案</p>
         </div>
     </section>
+
+    <section class="intro-section">
+        <div class="container">
+            <div class="intro-content">
+                <h2>产品概述</h2>
+                <p>贴片机系列提供高速高精度 SMT 贴装设备，支持 0201-50mm 元器件，适用于多种封装类型。我们的贴片机采用先进的视觉识别系统和精密运动控制技术，可实现高精度、高速度的贴装作业。</p>
+                <p>本系列提供 8 种型号，从桌面式到在线式，从经济型到旗舰型，满足不同客户的产能和精度要求。</p>
+            </div>
+        </div>
+    </section>
+
     <section class="products-section">
         <div class="container">
             <h2 class="section-title">产品型号</h2>
             <div class="products-grid">
+                <!-- TP300V -->
                 <div class="product-card">
-                    <h3>桌面式贴片机</h3>
-                    <p>适合研发和小批量，紧凑设计</p>
-                    <a href="/products/placer/desktop/" class="product-link">查看详情 →</a>
+                    <div class="product-header">
+                        <div class="product-model">TP300V</div>
+                        <div class="product-series">桌面式贴片机 · 经济型</div>
+                    </div>
+                    <div class="product-body">
+                        <ul class="product-features">
+                            <li>桌面式紧凑设计</li>
+                            <li>视觉定位系统</li>
+                            <li>适合研发和小批量</li>
+                            <li>经济实用</li>
+                        </ul>
+                        <a href="/products/placer/tp300v/" class="product-link">查看详情 →</a>
+                    </div>
                 </div>
+
+                <!-- TP320V -->
                 <div class="product-card">
-                    <h3>高速贴片机</h3>
-                    <p>高速度高精度，适合大规模生产</p>
-                    <a href="/products/placer/high-speed/" class="product-link">查看详情 →</a>
+                    <div class="product-header">
+                        <div class="product-model">TP320V</div>
+                        <div class="product-series">桌面式贴片机 · 标准型</div>
+                    </div>
+                    <div class="product-body">
+                        <ul class="product-features">
+                            <li>升级视觉系统</li>
+                            <li>更高贴装速度</li>
+                            <li>适合中小批量</li>
+                            <li>性能均衡</li>
+                        </ul>
+                        <a href="/products/placer/tp320v/" class="product-link">查看详情 →</a>
+                    </div>
                 </div>
+
+                <!-- T4 -->
                 <div class="product-card">
-                    <h3>多功能贴片机</h3>
-                    <p>支持多种元器件，灵活性强</p>
-                    <a href="/products/placer/multi-function/" class="product-link">查看详情 →</a>
+                    <div class="product-header">
+                        <div class="product-model">T4</div>
+                        <div class="product-series">中型贴片机 · 标准型</div>
+                    </div>
+                    <div class="product-body">
+                        <ul class="product-features">
+                            <li>中型生产容量</li>
+                            <li>多吸嘴配置</li>
+                            <li>适合中等批量</li>
+                            <li>性价比高</li>
+                        </ul>
+                        <a href="/products/placer/t4/" class="product-link">查看详情 →</a>
+                    </div>
+                </div>
+
+                <!-- T4PLUS -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-model">T4PLUS</div>
+                        <div class="product-series">中型贴片机 · 增强型</div>
+                    </div>
+                    <div class="product-body">
+                        <ul class="product-features">
+                            <li>T4 增强版本</li>
+                            <li>更高精度</li>
+                            <li>更多供料器</li>
+                            <li>适合大批量</li>
+                        </ul>
+                        <a href="/products/placer/t4plus/" class="product-link">查看详情 →</a>
+                    </div>
+                </div>
+
+                <!-- T8S -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-model">T8S</div>
+                        <div class="product-series">高速贴片机 · 单头</div>
+                    </div>
+                    <div class="product-body">
+                        <ul class="product-features">
+                            <li>高速贴装</li>
+                            <li>单头设计</li>
+                            <li>适合大规模生产</li>
+                            <li>稳定可靠</li>
+                        </ul>
+                        <a href="/products/placer/t8s/" class="product-link">查看详情 →</a>
+                    </div>
+                </div>
+
+                <!-- T8H -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-model">T8H</div>
+                        <div class="product-series">高速贴片机 · 双头</div>
+                    </div>
+                    <div class="product-body">
+                        <ul class="product-features">
+                            <li>双头同时贴装</li>
+                            <li>超高速度</li>
+                            <li>适合超大批量</li>
+                            <li>效率翻倍</li>
+                        </ul>
+                        <a href="/products/placer/t8h/" class="product-link">查看详情 →</a>
+                    </div>
+                </div>
+
+                <!-- M6 -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-model">M6</div>
+                        <div class="product-series">多功能贴片机 · 标准型</div>
+                    </div>
+                    <div class="product-body">
+                        <ul class="product-features">
+                            <li>多功能配置</li>
+                            <li>支持异形元件</li>
+                            <li>灵活性强</li>
+                            <li>应用广泛</li>
+                        </ul>
+                        <a href="/products/placer/m6/" class="product-link">查看详情 →</a>
+                    </div>
+                </div>
+
+                <!-- M6D -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-model">M6D</div>
+                        <div class="product-series">多功能贴片机 · 双轨型</div>
+                    </div>
+                    <div class="product-body">
+                        <ul class="product-features">
+                            <li>双轨并行生产</li>
+                            <li>效率提升 50%</li>
+                            <li>适合多品种</li>
+                            <li>旗舰配置</li>
+                        </ul>
+                        <a href="/products/placer/m6d/" class="product-link">查看详情 →</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom">
@@ -80,6 +223,7 @@
             </div>
         </div>
     </footer>
+
     <script src="/js/main.js"></script>
 </body>
 </html>
