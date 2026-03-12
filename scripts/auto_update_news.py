@@ -145,9 +145,9 @@ def create_news_article(category, date):
     # 生成文章 ID
     article_id = date.strftime("%Y%m%d") + "-" + category[:2] + "-" + str(random.randint(100, 999))
     
-    # 生成文章链接
+    # 生成文章链接（使用日期格式）
     category_dir = "industry" if category == "行业资讯" else "technology"
-    link = f"/news/{category_dir}/{article_id}.html"
+    link = f"/news/{category_dir}/"
     
     return {
         "id": article_id,
